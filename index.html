@@ -35,10 +35,11 @@
 		} else {
 		}
 		alert($nuevo);
-		
-		function onBackKeyDown() {
-	    alert("backbtn")
 		}
+		document.addEventListener("backbutton", onBackKeyDown, false);
+
+		function onBackKeyDown() {
+			alert("back")
 		}
 	</script>
 </head>
