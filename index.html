@@ -39,7 +39,12 @@
 		document.addEventListener("backbutton", onBackKeyDown, false);
 
 		function onBackKeyDown() {
-			alert("back")
+			navigator.notification.confirm(
+				'Desea salir de la aplicación',  // message
+				onConfirm,        // callback to invoke with index of button pressed
+				'Logout',         // title
+				'Ok,Cancelar'       // buttonLabels
+				);
 		}
 	</script>
 </head>
