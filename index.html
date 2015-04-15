@@ -39,12 +39,15 @@
 		document.addEventListener("backbutton", onBackKeyDown, false);
 
 		function onBackKeyDown() {
+			alert('You selected button ' + buttonIndex);
+		}
+		function showConfirm() {
 			navigator.notification.confirm(
-				'Desea salir de la aplicación',  // message
-				onConfirm,        // callback to invoke with index of button pressed
-				'Logout',         // title
-				'Ok,Cancelar'       // buttonLabels
-				);
+				'You are the winner!', // message
+				 onConfirm,            // callback to invoke with index of button pressed
+				'Game Over',           // title
+				['Restart','Exit']         // buttonLabels
+			);
 		}
 	</script>
 </head>
